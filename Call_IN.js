@@ -207,7 +207,7 @@ function failedCall()
   opt.postData = callUID; //accNumber +";"+ e.callerid +";"+ accessURL +";"+ sessionId;
   opt.method = 'post';
   Net.httpRequestAsync('http://b24:23698252@s01.motivix.mykeenetic.net/pc/hs/voximplant/infld', opt)
-  .then(function(result) 
+  .then(function(result)
         {
           if(result.code=='200')
           {
@@ -217,6 +217,7 @@ function failedCall()
 
 function call_1C(e,comName,continueConnect)
 {
+
   var opt = new Net.HttpRequestOptions();
   opt.postData = comName +";"+ callUID +";"+ sessionId +";"+ voxLogin +";"+ e.code +";"+ e.reason +";"+ accessURL;
   opt.method = 'post';
